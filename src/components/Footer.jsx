@@ -94,8 +94,7 @@ const Footer = () => {
 
           <Link
             to="/#contacto"
-            className="mt-5 inline-flex rounded-full bg-white px-8 py-4 text-lg font-extrabold text-[#E86020] transition hover:bg-white/90"
-          >
+className="mt-5 inline-flex rounded-full bg-white px-8 py-4 text-lg font-extrabold !text-[#E86020] transition hover:bg-white/90"          >
             Solicitar cita
           </Link>
         </div>
