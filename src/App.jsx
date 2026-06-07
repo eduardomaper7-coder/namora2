@@ -14,6 +14,10 @@ import Location from './components/Location'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 import AllTreatments from './components/AllTreatments'
+import BeforeAfter from './components/BeforeAfter'
+import Equipo from './components/Equipo'
+import Facilities from './components/Facilities'
+
 import Legal from './pages/Legal'
 
 const Home = () => (
@@ -25,6 +29,8 @@ const Home = () => (
 
     <Treatments />
     <WhyUs />
+    <BeforeAfter />
+    <Facilities />
     <FeaturedBox />
     <HowWeWork />
     <Testimonials />
@@ -38,8 +44,6 @@ const Home = () => (
 function App() {
   return (
     <main className="bg-white text-black">
-
-      {/* 🔥 ESTO ES LO IMPORTANTE */}
       <ScrollToTop />
 
       <Routes>
@@ -51,6 +55,17 @@ function App() {
             <>
               <Navbar />
               <AllTreatments />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/equipo"
+          element={
+            <>
+              <Navbar />
+              <Equipo />
               <Footer />
             </>
           }
