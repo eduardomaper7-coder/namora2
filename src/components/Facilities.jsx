@@ -1,111 +1,128 @@
 import {
-  FaCouch,
-  FaHospital,
-  FaLeaf,
-  FaUserFriends,
+  FaClinicMedical,
   FaTooth,
+  FaCouch,
   FaCamera,
 } from 'react-icons/fa'
 
 const spaces = [
   {
-    icon: <FaCouch />,
-    title: 'Sala de espera',
+    icon: <FaClinicMedical />,
+    title: 'Gabinete Tenerife',
     text:
-      'Un espacio pensado para transmitir tranquilidad, cercanía y comodidad mientras esperas tu cita.',
-    image: '/instalaciones-sala-espera.jpg',
-  },
-  {
-    icon: <FaHospital />,
-    title: 'Recepción',
-    text:
-      'Queremos que cada paciente se sienta cómodo desde el primer momento, en un entorno moderno y agradable.',
-    image: '/instalaciones-recepcion.jpg',
-  },
-  {
-    icon: <FaLeaf />,
-    title: 'Mostrador de entrada',
-    text:
-      'La iluminación, las plantas naturales y un ambiente relajado ayudan a generar confianza desde la llegada.',
-    image: '/instalaciones-mostrador-entrada.jpg',
-  },
-  {
-    icon: <FaUserFriends />,
-    title: 'Atención al paciente',
-    text:
-      'Te acompañamos durante todo el tratamiento para resolver cualquier duda y ofrecerte una atención personalizada.',
-    image: '/instalaciones-atencion-paciente.jpg',
+      'Un espacio moderno, luminoso y equipado para realizar tratamientos dentales con comodidad y precisión.',
+    images: [
+      '/gabinete-tenerife-namora-1.JPG',
+      '/gabinete-tenerife-namora-2.JPG',
+      '/gabinete-tenerife-namora-3.JPG',
+      '/gabinete-tenerife-namora-4.JPG',
+    ],
   },
   {
     icon: <FaTooth />,
-    title: 'Gabinetes dentales',
+    title: 'Gabinete Lanzarote',
     text:
-      'Disponemos de 3 gabinetes y sala de RX equipada con TAC dental 3D y ortopantomografía.',
-    image: '/instalaciones-gabinete-dental.jpg',
+      'Un gabinete preparado para cuidar tu sonrisa en un entorno profesional, cercano y agradable.',
+    images: [
+      '/gabinete-lanzarote-namora-1.JPG',
+      '/gabinete-lanzarote-namora-2.JPG',
+      '/gabinete-lanzarote-namora-3.JPG',
+      '/gabinete-lanzarote-namora-4.JPG',
+    ],
+  },
+  {
+    icon: <FaCouch />,
+    title: 'Sala de espera',
+    text:
+      'Una zona cómoda y tranquila para que cada paciente se sienta acompañado desde el primer momento.',
+    images: [
+      '/sala-espera-namora-1.JPG',
+      '/sala-espera-namora-2.JPG',
+      '/sala-espera-namora-3.JPG',
+    ],
   },
   {
     icon: <FaCamera />,
     title: 'Escáner intraoral',
     text:
-      'Tecnología digital avanzada para obtener impresiones más precisas y cómodas para el paciente.',
-    image: '/instalaciones-escaner-intraoral.jpg',
+      'Tecnología digital que permite tomar registros precisos de forma rápida, cómoda y sin molestias.',
+    images: [
+      '/escaner-intraoral-namora-1.JPG',
+      '/escaner-intraoral-namora-2.JPG',
+      '/escaner-intraoral-namora-3.JPG',
+    ],
   },
 ]
 
 const Facilities = () => {
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-4">
+    <section className="relative overflow-hidden bg-[#FFF6F1] py-24">
+      <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-[#E86020]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-20 h-72 w-72 rounded-full bg-[#E86020]/10 blur-3xl" />
 
+      <div className="relative mx-auto max-w-7xl px-4">
         <div className="mx-auto max-w-4xl text-center">
-          <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#C8923B]">
-            Nuestras instalaciones
+          <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#E86020]">
+            Espacios Namora
           </span>
 
-          <h2 className="mt-4 text-4xl font-extrabold text-[#A87325] md:text-5xl">
-            Conoce nuestra clínica
+          <h2 className="mt-4 text-4xl font-extrabold leading-tight text-neutral-900 md:text-5xl">
+            Instalaciones pensadas para tu comodidad
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-neutral-600">
-            Nuestra clínica abrió sus puertas en 2020 con el objetivo de ofrecer
-            una experiencia cómoda, cercana y profesional. Cada detalle ha sido
-            pensado para transmitir tranquilidad, confianza y bienestar.
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-neutral-600">
+            En Clínica Dental Namora cuidamos cada detalle para que tu visita
+            sea cómoda, tranquila y profesional desde que entras hasta que
+            finaliza tu tratamiento.
           </p>
-
-          <a
-            href="https://www.google.es/maps/place/Centro+Odontol%C3%B3gico+Solymar+Cabrera"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex rounded-full bg-[#C8923B] px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-[#A87325]"
-          >
-            Ver visita virtual 3D
-          </a>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
           {spaces.map((space) => (
             <article
               key={space.title}
-              className="overflow-hidden rounded-[2rem] border border-[#C8923B]/15 bg-[#FBF8F2] shadow-[0_18px_45px_rgba(200,146,59,0.12)]"
+              className="group overflow-hidden rounded-[2.2rem] bg-white shadow-[0_22px_60px_rgba(232,96,32,0.13)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(232,96,32,0.22)]"
             >
-              <img
-                src={space.image}
-                alt={space.title}
-                className="h-56 w-full object-cover"
-              />
+              <div className="grid h-[430px] grid-cols-2 grid-rows-2 gap-2 bg-white p-2">
+                {space.images.map((image, index) => (
+                  <div
+                    key={image}
+                    className={`relative overflow-hidden ${
+                      index === 0
+                        ? 'rounded-tl-[1.8rem]'
+                        : index === 1
+                        ? 'rounded-tr-[1.8rem]'
+                        : index === 2
+                        ? 'rounded-bl-[1.8rem]'
+                        : 'rounded-br-[1.8rem]'
+                    } ${space.images.length === 3 && index === 0 ? 'row-span-2' : ''}`}
+                  >
+                    <img
+                      src={image}
+                      alt={`${space.title} Clínica Dental Namora imagen ${index + 1}`}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
 
-              <div className="p-7">
-                <div className="mb-4 text-3xl text-[#C8923B]">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-5 p-7 sm:flex-row sm:items-start">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#E86020] text-2xl text-white shadow-lg">
                   {space.icon}
                 </div>
 
-                <h3 className="text-2xl font-extrabold text-[#A87325]">
-                  {space.title}
-                </h3>
+                <div>
+                  <h3 className="text-2xl font-extrabold text-neutral-900">
+                    {space.title}
+                  </h3>
 
-                <p className="mt-3 leading-7 text-neutral-600">
-                  {space.text}
-                </p>
+                  <p className="mt-3 text-base leading-7 text-neutral-600">
+                    {space.text}
+                  </p>
+                </div>
               </div>
             </article>
           ))}

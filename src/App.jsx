@@ -14,10 +14,9 @@ import Location from './components/Location'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 import AllTreatments from './components/AllTreatments'
-import BeforeAfter from './components/BeforeAfter'
-import Equipo from './components/Equipo'
 import Facilities from './components/Facilities'
 
+import Equipo from './pages/Equipo'
 import Legal from './pages/Legal'
 
 const Home = () => (
@@ -29,7 +28,6 @@ const Home = () => (
 
     <Treatments />
     <WhyUs />
-    <BeforeAfter />
     <Facilities />
     <FeaturedBox />
     <HowWeWork />

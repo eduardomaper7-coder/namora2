@@ -1,40 +1,47 @@
 const reviews = [
   {
-    text: 'Después de tantos malos tratos y malas experiencias en otras clínicas odontológicas, llegué aquí donde el trato y el trabajo son excepcionales. Te explican con mucha paciencia cada tratamiento y procedimiento. El trato con los niños es maravilloso. La Dra. Cabrera es muy paciente y cuidadosa. Miriam es encantadora y muy resolutiva. Es un equipo de trabajo fantástico, muy profesional y 100% recomendable.',
-    name: 'Adriana Sequera',
-    time: 'Hace 6 meses',
+    text:
+      'Acudí a Layra por un frenillo corto de mi bebé de 2 meses. El trato ha sido fabuloso y tras la operación se preocuparon de cómo fue evolucionando mi pequeña. Solo tengo palabras de agradecimiento para ella y para todo el equipo.',
+    name: 'Carolina Luis Torres',
+    time: 'Hace 4 meses',
   },
   {
-    text: 'Llevo años viniendo por su trato y profesionalidad. La Dra. Cabrera es cercana y explica todos los procedimientos para que sepas qué te van a hacer y por qué, algo que transmite mucha tranquilidad. Tengo total confianza en ella y en todo el equipo. Los precios son ajustados y la posibilidad de financiar los tratamientos también se agradece. Recomendable 100%.',
-    name: 'Yaiza Suárez Afonso',
-    time: 'Hace 7 meses',
+    text:
+      'Estoy súper contenta de haber dado con una clínica tan cercana y profesional. La clínica es muy acogedora y los profesionales han sido espectaculares conmigo. Gracias al Dr. Juan Pablo, Luzma y Ainhoa. Un 10 sobre 10.',
+    name: 'Aynara Perez Medina',
+    time: 'Hace 4 meses',
   },
   {
-    text: 'El equipo es maravilloso. No solo por lo grandes profesionales que son, sino porque además son todas encantadoras. Gracias especialmente a la Dra. Cabrera por explicarme todo al detalle y transmitirme tranquilidad y confianza. Me sentí genial en todo momento y salí feliz después de mi tratamiento. Ya no necesito buscar más porque encontré a las mejores.',
-    name: 'Paciente verificado',
+    text:
+      'Si buscas una clínica de confianza, donde te sientas seguro, Namora es tu lugar. Los profesionales son de lo mejor del sector, claros, transparentes y te asesoran en todo. La Dra. Luz Marina tiene manos de oro.',
+    name: 'Paciente de Namora',
     time: 'Reseña de Google',
   },
 ]
 
 const Testimonials = () => {
   return (
-    <section className="bg-[#FBF8F2] py-24">
-      <div className="mx-auto max-w-7xl px-4">
+    <section className="relative overflow-hidden bg-white py-24">
+      <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-[#E86020]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-20 h-72 w-72 rounded-full bg-[#E86020]/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="inline-flex rounded-full bg-[#C8923B] px-5 py-2 text-sm font-bold text-white shadow-lg">
+          <span className="inline-flex rounded-full bg-[#E86020] px-5 py-2 text-sm font-bold text-white shadow-lg">
             Opiniones reales
           </span>
 
-          <h2 className="mt-6 text-4xl font-extrabold text-[#A87325] sm:text-5xl">
-            Lo que dicen nuestros pacientes
+          <h2 className="mt-6 text-4xl font-extrabold text-neutral-900 sm:text-5xl">
+            Pacientes que confían en Clínica Dental Namora
           </h2>
 
-          <div className="mt-5 text-3xl tracking-[0.15em] text-[#C8923B]">
+          <div className="mt-5 text-3xl tracking-[0.15em] text-[#E86020]">
             ★★★★★
           </div>
 
           <p className="mt-4 text-lg text-neutral-600">
-            Pacientes que confían en Clínica Dental Solymar Cabrera
+            Reseñas de pacientes que destacan nuestro trato cercano,
+            profesionalidad y confianza.
           </p>
         </div>
 
@@ -42,18 +49,26 @@ const Testimonials = () => {
           {reviews.map((review, index) => (
             <article
               key={index}
-              className="flex min-h-[420px] flex-col rounded-[2rem] border border-[#C8923B]/15 bg-white p-8 shadow-[0_18px_45px_rgba(200,146,59,0.10)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(200,146,59,0.18)]"
+              className={`flex min-h-[380px] flex-col rounded-[2rem] border border-[#E86020]/10 bg-[#FFF6F1] p-8 shadow-[0_18px_45px_rgba(232,96,32,0.10)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(232,96,32,0.18)] ${
+                index === 1 ? 'lg:-translate-y-6' : ''
+              }`}
             >
-              <div className="mb-6 text-xl tracking-[0.15em] text-[#C8923B]">
-                ★★★★★
+              <div className="mb-6 flex items-center justify-between gap-4">
+                <div className="text-xl tracking-[0.15em] text-[#E86020]">
+                  ★★★★★
+                </div>
+
+                <span className="rounded-full bg-white px-4 py-2 text-xs font-bold text-[#E86020] shadow-sm">
+                  Google
+                </span>
               </div>
 
               <p className="flex-1 text-[15px] leading-8 text-neutral-700">
-                "{review.text}"
+                “{review.text}”
               </p>
 
-              <div className="mt-8 border-t border-[#C8923B]/10 pt-6">
-                <p className="text-xl font-bold text-[#A87325]">
+              <div className="mt-8 border-t border-[#E86020]/10 pt-6">
+                <p className="text-xl font-extrabold text-neutral-900">
                   {review.name}
                 </p>
 
@@ -65,12 +80,15 @@ const Testimonials = () => {
           ))}
         </div>
 
-        <div className="mt-14 text-center">
-          <div className="inline-flex rounded-full border border-[#C8923B]/20 bg-white px-8 py-4 shadow-[0_10px_30px_rgba(200,146,59,0.10)]">
-            <span className="font-semibold text-neutral-700">
-              Más pacientes satisfechos cada año ⭐
-            </span>
-          </div>
+        <div className="mx-auto mt-16 max-w-4xl rounded-[2rem] bg-[#E86020] px-8 py-10 text-center text-white shadow-[0_24px_70px_rgba(232,96,32,0.22)]">
+          <p className="text-3xl font-extrabold">
+            Tu experiencia también importa
+          </p>
+
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-white/90">
+            En Namora trabajamos cada día para que cada paciente se sienta
+            escuchado, acompañado y seguro durante su tratamiento.
+          </p>
         </div>
       </div>
     </section>

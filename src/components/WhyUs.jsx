@@ -2,33 +2,39 @@ import { useEffect, useState } from 'react'
 
 const slides = [
   {
-    image: '/clinica-dental-solymar-interior.jpg',
-    alt: 'Interior de Clínica Dental Solymar Cabrera en Santa Cruz de Tenerife',
-    badge: 'Clínica dental en Santa Cruz de Tenerife con atención cercana',
+    image: '/clinica-dental-namora-interior.JPG',
+    alt: 'Interior de Clínica Dental Namora en Santa Cruz de Tenerife',
   },
   {
-    image: '/clinica-dental-solymar-equipo.jpg',
-    alt: 'Clínica Dental Solymar Cabrera en Tenerife',
-    badge: '20 años de experiencia cuidando sonrisas',
+    image: '/clinica-dental-namora-gabinete.JPG',
+    alt: 'Gabinete dental de Clínica Dental Namora en Santa Cruz de Tenerife',
+  },
+  {
+    image: '/equipo-clinica-dental-namora.JPG',
+    alt: 'Equipo de Clínica Dental Namora en Santa Cruz de Tenerife',
   },
 ]
 
 const values = [
   {
-    title: '20 años de experiencia',
-    text: 'Nuestra trayectoria nos permite ofrecer tratamientos dentales seguros, personalizados y adaptados a cada paciente.',
+    number: '01',
+    title: 'Atención cercana',
+    text: 'Te escuchamos, resolvemos tus dudas y te acompañamos en cada paso del tratamiento.',
   },
   {
-    title: '5 estrellas en Google',
-    text: 'La confianza de nuestros pacientes es nuestra mejor carta de presentación.',
+    number: '02',
+    title: 'Tratamientos a medida',
+    text: 'Cada sonrisa es diferente. Por eso diseñamos planes personalizados según tus necesidades.',
   },
   {
-    title: '200 m² de instalaciones',
-    text: 'Un espacio amplio, cómodo y preparado para ofrecer una experiencia dental agradable.',
+    number: '03',
+    title: 'Estética y salud',
+    text: 'Buscamos resultados naturales, funcionales y pensados para que sonrías con confianza.',
   },
   {
-    title: 'Especialidades odontológicas',
-    text: 'Implantología, ortodoncia, estética dental, periodoncia, endodoncia, prótesis y odontología general.',
+    number: '04',
+    title: 'Clínica en Santa Cruz',
+    text: 'Un espacio cómodo y profesional para cuidar tu salud bucodental cerca de ti.',
   },
 ]
 
@@ -44,86 +50,31 @@ const WhyUs = () => {
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-[#FBF8F2] py-20">
-      <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#C8923B]/10 blur-3xl"></div>
-      <div className="absolute -right-24 bottom-24 h-72 w-72 rounded-full bg-[#C8923B]/10 blur-3xl"></div>
+    <section className="relative overflow-hidden bg-white py-20">
+      <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#E86020]/10 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#E86020]/10 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 lg:grid-cols-2">
-        <div className="relative">
-          <span className="absolute -left-10 top-0 hidden rotate-180 text-xs font-bold uppercase tracking-[0.4em] text-[#C8923B] lg:block [writing-mode:vertical-rl]">
-            Solymar Cabrera
-          </span>
-
-          <div className="max-w-xl">
-            <span className="inline-flex rounded-full bg-[#C8923B] px-5 py-2 text-sm font-bold text-white shadow-lg">
-              Nuestro valor
+      <div className="relative mx-auto max-w-7xl px-4">
+        <div className="mb-14 grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+          <div>
+            <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#E86020]">
+              Clínica Dental Namora
             </span>
 
-            <h2 className="mt-5 text-4xl font-extrabold leading-tight text-[#A87325] sm:text-5xl">
-              ¿Por qué elegir nuestra clínica dental?
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-neutral-900 sm:text-4xl md:text-5xl">
+              Una clínica pensada para que te sientas tranquilo
             </h2>
-
-            <p className="mt-6 text-lg leading-9 text-neutral-700">
-              Somos tu dentista de confianza en Santa Cruz de Tenerife. Ven a
-              conocernos y lo comprobarás: cuidamos tu salud bucodental con
-              atención cercana, tratamientos personalizados y un equipo enfocado
-              en mejorar la salud y estética de tu sonrisa.
-            </p>
-
-            <div className="mt-8 grid gap-5 sm:grid-cols-2">
-              {values.map((item, index) => (
-                <div
-                  key={index}
-                  className="rounded-3xl border border-[#C8923B]/15 bg-white p-5 shadow-[0_14px_35px_rgba(200,146,59,0.10)]"
-                >
-                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#FBF8F2] text-lg font-extrabold text-[#C8923B] ring-1 ring-[#C8923B]/20">
-                    {index + 1}
-                  </div>
-
-                  <h3 className="text-xl font-extrabold text-[#A87325]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2 text-base leading-7 text-neutral-600">
-                    {item.text}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 flex flex-col gap-3">
-  <div className="flex flex-col gap-3 sm:flex-row">
-    <a
-      href="/#contacto"
-      className="inline-flex justify-center rounded-full bg-[#C8923B] px-8 py-4 text-base font-bold text-white shadow-lg transition hover:bg-[#A87325]"
-    >
-      Contactar
-    </a>
-
-    <a
-      href="tel:922441744"
-      className="inline-flex justify-center rounded-full border-2 border-[#C8923B] px-8 py-4 text-base font-bold text-[#C8923B] transition hover:bg-[#C8923B] hover:text-white"
-    >
-      Llamar ahora
-    </a>
-  </div>
-
-  <a
-    href="/equipo"
-    className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-bold text-[#A87325] shadow-[0_12px_30px_rgba(200,146,59,0.15)] transition hover:-translate-y-0.5 hover:bg-[#FBF8F2]"
-  >
-    Conoce a nuestro equipo →
-  </a>
-</div>
           </div>
+
+          <p className="text-lg leading-8 text-neutral-600 sm:text-xl">
+            En Namora cuidamos tu sonrisa con un trato humano, explicaciones
+            claras y tratamientos personalizados en Santa Cruz de Tenerife.
+          </p>
         </div>
 
-        <div className="relative">
-          <div className="absolute -right-5 -top-5 h-28 w-28 rounded-[2rem] bg-[#C8923B]/20"></div>
-          <div className="absolute -bottom-5 -left-5 h-28 w-28 rounded-[2rem] bg-[#C8923B]"></div>
-
-          <div className="relative overflow-hidden rounded-[2.2rem] border border-white/60 bg-white p-3 shadow-[0_25px_70px_rgba(200,146,59,0.22)]">
-            <div className="relative h-[500px] w-full overflow-hidden rounded-[1.8rem]">
+        <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="relative overflow-hidden rounded-[2.5rem] bg-[#FFF6F1] p-3 shadow-[0_24px_70px_rgba(232,96,32,0.16)]">
+            <div className="relative h-[520px] overflow-hidden rounded-[2rem]">
               {slides.map((slide, index) => (
                 <img
                   key={index}
@@ -137,35 +88,92 @@ const WhyUs = () => {
                 />
               ))}
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
 
-              <div className="absolute left-6 top-6 z-10 max-w-sm rounded-2xl bg-white/95 px-5 py-4 shadow-lg backdrop-blur-sm">
-                <p className="text-base font-bold leading-7 text-[#A87325]">
-                  {slides[currentSlide].badge}
+              <div className="absolute bottom-6 left-6 right-6 rounded-[1.5rem] bg-white/95 p-6 shadow-xl backdrop-blur">
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#E86020]">
+                  Tu sonrisa, en buenas manos
                 </p>
-              </div>
 
-              <div className="absolute bottom-6 left-6 z-10 rounded-2xl bg-[#C8923B] px-5 py-4 text-white shadow-xl">
-                <p className="text-3xl font-extrabold">20+</p>
-                <p className="text-sm font-bold uppercase tracking-wide">
-                  años de experiencia
+                <p className="mt-2 text-2xl font-extrabold text-neutral-900">
+                  Odontología cercana, estética y personalizada
                 </p>
               </div>
             </div>
+
+            <div className="mt-5 flex items-center justify-center gap-3">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => setCurrentSlide(index)}
+                  className={`h-3 rounded-full transition ${
+                    currentSlide === index
+                      ? 'w-8 bg-[#E86020]'
+                      : 'w-3 bg-black/20'
+                  }`}
+                  aria-label={`Ir a imagen ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-3">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                onClick={() => setCurrentSlide(index)}
-                className={`h-3 w-3 rounded-full transition ${
-                  currentSlide === index ? 'bg-[#C8923B]' : 'bg-black/20'
-                }`}
-                aria-label={`Ir a imagen ${index + 1}`}
-              />
+          <div className="grid gap-5">
+            {values.map((item) => (
+              <div
+                key={item.number}
+                className="group rounded-[2rem] border border-[#E86020]/10 bg-white p-6 shadow-[0_16px_45px_rgba(232,96,32,0.10)] transition hover:-translate-y-1 hover:bg-[#FFF6F1]"
+              >
+                <div className="flex gap-5">
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#E86020] text-lg font-extrabold text-white shadow-lg">
+                    {item.number}
+                  </span>
+
+                  <div>
+                    <h3 className="text-xl font-extrabold text-neutral-900">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-2 text-base leading-7 text-neutral-600">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
             ))}
+
+            <div className="rounded-[2rem] bg-[#E86020] p-6 text-white shadow-[0_20px_55px_rgba(232,96,32,0.25)]">
+              <p className="text-2xl font-extrabold">
+                ¿Quieres conocernos?
+              </p>
+
+              <p className="mt-2 text-white/90">
+                Pide tu cita y te ayudamos a encontrar el tratamiento más
+                adecuado para ti.
+              </p>
+
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+  <a
+    href="/#contacto"
+    className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-full bg-[#C84A12] px-4 py-3 font-bold text-white transition hover:bg-[#B84310]"
+  >
+    Contactar
+  </a>
+
+  <a
+    href="tel:822612870"
+    className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-full border-2 border-white px-4 py-3 font-bold text-white transition hover:bg-white hover:text-[#E86020]"
+  >
+    Llamar ahora
+  </a>
+
+  <a
+    href="/equipo"
+className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-full bg-white px-4 py-3 font-bold !text-[#E86020] transition hover:bg-white/90"  >
+    Ver equipo
+  </a>
+</div>
+            </div>
           </div>
         </div>
       </div>
