@@ -11,7 +11,7 @@ const cases = [
     title: 'Ortodoncia invisible',
     description:
       'Tratamiento mediante alineadores transparentes y planificación digital avanzada para conseguir una sonrisa más alineada, estética y funcional.',
-    image: '/ortodoncia-invisible.PNG',
+    image: '/ortodoncia-invisible.png',
   },
   {
     title: 'Gingivectomía estética',

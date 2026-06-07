@@ -15,6 +15,7 @@ import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 import AllTreatments from './components/AllTreatments'
 import Facilities from './components/Facilities'
+import ClinicalCasesPreview from './components/ClinicalCasesPreview'
 
 import Equipo from './pages/Equipo'
 import Legal from './pages/Legal'
@@ -29,6 +30,7 @@ const Home = () => (
     <Treatments />
     <WhyUs />
     <Facilities />
+    <ClinicalCasesPreview />
     <FeaturedBox />
     <HowWeWork />
     <Testimonials />
