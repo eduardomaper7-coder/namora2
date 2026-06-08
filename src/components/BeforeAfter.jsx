@@ -5,19 +5,19 @@ const cases = [
     title: 'Diseño de sonrisa',
     description:
       'Planificación digital y carillas directas de composite realizadas en una sola sesión para mejorar la forma, proporción y armonía dental.',
-    image: '/diseno-sonrisa.png',
+    image: '/diseno-sonrisa.webp',
   },
   {
     title: 'Ortodoncia invisible',
     description:
       'Tratamiento mediante alineadores transparentes y planificación digital avanzada para conseguir una sonrisa más alineada, estética y funcional.',
-    image: '/ortodoncia-invisible.PNG',
+    image: '/ortodoncia-invisible.webp',
   },
   {
     title: 'Gingivectomía estética',
     description:
       'Remodelado gingival para corregir la sonrisa gingival y mejorar la proporción entre dientes y encías.',
-    image: '/gingivectomia-estetica.png',
+    image: '/gingivectomia-estetica.webp',
   },
 ]
 const ClinicalCasesPreview = () => {

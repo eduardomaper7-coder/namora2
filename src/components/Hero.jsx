@@ -88,7 +88,7 @@ const Hero = () => {
               aria-label="Pedir cita por WhatsApp en Clínica Dental Namora"
             >
               <img
-                src="/whatsapp.png"
+                src="/whatsapp.webp?v=2"
                 alt=""
                 className="h-6 w-6"
                 aria-hidden="true"
@@ -136,7 +136,7 @@ const Hero = () => {
         aria-label="Escribir por WhatsApp a Clínica Dental Namora"
       >
         <img
-          src="/whatsapp.png"
+          src="/whatsapp.webp?v=2"
           alt="WhatsApp"
           className="h-8 w-8 sm:h-10 sm:w-10"
         />

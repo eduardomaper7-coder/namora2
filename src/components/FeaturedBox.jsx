@@ -6,9 +6,9 @@ const FeaturedBox = () => {
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid overflow-hidden rounded-[2.5rem] bg-white shadow-[0_24px_70px_rgba(232,96,32,0.14)] lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="relative min-h-[420px] lg:min-h-[640px]">
+          <div className="relative h-[520px] lg:h-[640px]">
             <img
-              src="/clinica-namora-principal.jpg"
+              src="/clinica-namora-principal.webp"
               alt="Clínica Dental Namora en Santa Cruz de Tenerife"
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -27,7 +27,7 @@ const FeaturedBox = () => {
 
             <div className="absolute -right-6 top-10 hidden w-48 overflow-hidden rounded-[1.7rem] border-4 border-white shadow-2xl lg:block">
               <img
-                src="/clinica-namora-equipo.JPG"
+                src="/clinica-namora-equipo.webp"
                 alt="Equipo de Clínica Dental Namora"
                 className="h-56 w-full object-cover"
               />

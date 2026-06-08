@@ -2,15 +2,15 @@ import { useEffect, useState } from 'react'
 
 const slides = [
   {
-    image: '/clinica-dental-namora-interior.JPG',
+    image: '/clinica-dental-namora-interior.webp',
     alt: 'Interior de Clínica Dental Namora en Santa Cruz de Tenerife',
   },
   {
-    image: '/clinica-dental-namora-gabinete.JPG',
-    alt: 'Gabinete dental de Clínica Dental Namora en Santa Cruz de Tenerife',
+    image: '/clinica-namora-equipo.webp',
+    alt: 'Equipo de Clínica Dental Namora en Santa Cruz de Tenerife',
   },
   {
-    image: '/equipo-clinica-dental-namora.JPG',
+    image: '/equipo-clinica-dental-namora.webp',
     alt: 'Equipo de Clínica Dental Namora en Santa Cruz de Tenerife',
   },
 ]

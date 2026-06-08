@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import {
   FaClinicMedical,
   FaTooth,
@@ -12,7 +13,6 @@ const spaces = [
     text:
       'Un espacio moderno, luminoso y equipado para realizar tratamientos dentales con comodidad y precisión.',
     images: [
-      '/gabinete-tenerife-namora-1.webp',
       '/gabinete-tenerife-namora-2.webp',
       '/gabinete-tenerife-namora-3.webp',
       '/gabinete-tenerife-namora-4.webp',
@@ -24,10 +24,8 @@ const spaces = [
     text:
       'Un gabinete preparado para cuidar tu sonrisa en un entorno profesional, cercano y agradable.',
     images: [
-      '/gabinete-lanzarote-namora-1.JPG',
-      '/gabinete-lanzarote-namora-2.JPG',
-      '/gabinete-lanzarote-namora-3.JPG',
-      '/gabinete-lanzarote-namora-4.JPG',
+      '/gabinete-lanzarote-namora-2.webp',
+      '/gabinete-lanzarote-namora-3.webp',
     ],
   },
   {
@@ -36,9 +34,9 @@ const spaces = [
     text:
       'Una zona cómoda y tranquila para que cada paciente se sienta acompañado desde el primer momento.',
     images: [
-      '/sala-espera-namora-1.JPG',
-      '/sala-espera-namora-2.JPG',
-      '/sala-espera-namora-3.JPG',
+      '/sala-espera-namora-1.webp',
+      '/sala-espera-namora-2.webp',
+      '/sala-espera-namora-3.webp',
     ],
   },
   {
@@ -47,14 +45,30 @@ const spaces = [
     text:
       'Tecnología digital que permite tomar registros precisos de forma rápida, cómoda y sin molestias.',
     images: [
-      '/escaner-intraoral-namora-1.JPG',
-      '/escaner-intraoral-namora-2.JPG',
-      '/escaner-intraoral-namora-3.JPG',
+      '/escaner-intraoral-namora-1.webp',
+      '/escaner-intraoral-namora-2.webp',
+      '/escaner-intraoral-namora-3.webp',
     ],
   },
 ]
 
 const Facilities = () => {
+  const [activeIndexes, setActiveIndexes] = useState(
+    spaces.map(() => 0)
+  )
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndexes((prev) =>
+        prev.map((index, spaceIndex) =>
+          (index + 1) % spaces[spaceIndex].images.length
+        )
+      )
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="relative overflow-hidden bg-[#FFF6F1] py-24">
       <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-[#E86020]/10 blur-3xl" />
@@ -78,35 +92,49 @@ const Facilities = () => {
         </div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
-          {spaces.map((space) => (
+          {spaces.map((space, spaceIndex) => (
             <article
               key={space.title}
               className="group overflow-hidden rounded-[2.2rem] bg-white shadow-[0_22px_60px_rgba(232,96,32,0.13)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(232,96,32,0.22)]"
             >
-              <div className="grid h-[430px] grid-cols-2 grid-rows-2 gap-2 bg-white p-2">
+              <div className="relative h-[430px] overflow-hidden bg-white">
                 {space.images.map((image, index) => (
-                  <div
+                  <img
                     key={image}
-                    className={`relative overflow-hidden ${
-                      index === 0
-                        ? 'rounded-tl-[1.8rem]'
-                        : index === 1
-                        ? 'rounded-tr-[1.8rem]'
-                        : index === 2
-                        ? 'rounded-bl-[1.8rem]'
-                        : 'rounded-br-[1.8rem]'
-                    } ${space.images.length === 3 && index === 0 ? 'row-span-2' : ''}`}
-                  >
-                    <img
-                      src={image}
-                      alt={`${space.title} Clínica Dental Namora imagen ${index + 1}`}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
-                  </div>
+                    src={image}
+                    alt={`${space.title} Clínica Dental Namora imagen ${index + 1}`}
+                    className={`absolute inset-0 h-full w-full object-cover transition-all duration-1000 ${
+                      activeIndexes[spaceIndex] === index
+                        ? 'scale-100 opacity-100'
+                        : 'scale-105 opacity-0'
+                    }`}
+                    loading="lazy"
+                  />
                 ))}
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+
+                <div className="absolute bottom-5 left-5 flex gap-2">
+                  {space.images.map((_, index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      onClick={() =>
+                        setActiveIndexes((prev) =>
+                          prev.map((item, i) =>
+                            i === spaceIndex ? index : item
+                          )
+                        )
+                      }
+                      className={`h-2.5 rounded-full transition ${
+                        activeIndexes[spaceIndex] === index
+                          ? 'w-8 bg-white'
+                          : 'w-2.5 bg-white/50'
+                      }`}
+                      aria-label={`Ver imagen ${index + 1} de ${space.title}`}
+                    />
+                  ))}
+                </div>
               </div>
 
               <div className="flex flex-col gap-5 p-7 sm:flex-row sm:items-start">
