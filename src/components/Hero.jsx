@@ -56,7 +56,7 @@ const Hero = () => {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "url('/hero-clinica-dental-namora.JPG')",
+          backgroundImage: "url('/hero-clinica-dental-namora.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

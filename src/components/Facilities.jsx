@@ -12,10 +12,10 @@ const spaces = [
     text:
       'Un espacio moderno, luminoso y equipado para realizar tratamientos dentales con comodidad y precisión.',
     images: [
-      '/gabinete-tenerife-namora-1.JPG',
-      '/gabinete-tenerife-namora-2.JPG',
-      '/gabinete-tenerife-namora-3.JPG',
-      '/gabinete-tenerife-namora-4.JPG',
+      '/gabinete-tenerife-namora-1.webp',
+      '/gabinete-tenerife-namora-2.webp',
+      '/gabinete-tenerife-namora-3.webp',
+      '/gabinete-tenerife-namora-4.webp',
     ],
   },
   {

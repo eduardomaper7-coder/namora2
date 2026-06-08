@@ -11,7 +11,7 @@ const topProfessionals = [
     name: 'Dra. Solymar R. Cabrera Morales',
     area: 'Prostodoncia y Estética Dental',
     subtitle: 'Máster en Cirugía y Licenciada en Odontología',
-    image: '/equipo-solymar-cabrera.jpg',
+    image: '/equipo-solymar-cabrera.webp',
     license: 'Nº Colegiada: 38000914',
     details: [
       '2003 – Licenciada en Odontología – Universidad de Granada.',
@@ -22,7 +22,7 @@ const topProfessionals = [
     name: 'Dra. Laura Melián Rodríguez',
     area: 'Cirugía e Implantología Dental',
     subtitle: 'Máster en Rehabilitación con Implantes y Biomateriales',
-    image: '/equipo-laura-melian.jpg',
+    image: '/equipo-laura-melian.webp',
     license: 'Nº Colegiada: 38001247',
     details: [
       '2015 – Graduada en Odontología – Universidad de Zaragoza.',
@@ -36,7 +36,7 @@ const middleProfessionals = [
     name: 'Dra. Esmeralda Tavío Correa',
     area: 'Ortodoncia Invisible y Convencional',
     subtitle: 'Diplomada en Ortodoncia · Licenciada en Odontología',
-    image: '/equipo-esmeralda-tavio.jpg',
+    image: '/equipo-esmeralda-tavio.webp',
     license: 'Nº Colegiada: 38001330',
     details: [
       'Ortodoncia invisible, ortodoncia fija convencional, ortodoncia removible y ortopedia maxilar.',
@@ -48,7 +48,7 @@ const middleProfessionals = [
     name: 'Srta. Miriam Lozano Polegre',
     area: 'Atención y Asesoramiento al Paciente',
     subtitle: 'Acompañamiento personalizado',
-    image: '/equipo-miriam-lozano.jpg',
+    image: '/equipo-miriam-lozano.webp',
     license: '',
     details: [
       'Acompañamiento y asesoramiento a todos nuestros pacientes.',
@@ -62,7 +62,7 @@ const finalProfessionals = [
     name: 'Srta. Romina Porcel Sanz',
     area: 'Técnico Superior en Higiene Bucodental',
     subtitle: 'Higiene bucodental y apoyo clínico',
-    image: '/equipo-romina-porcel.jpg',
+    image: '/equipo-romina-porcel.webp',
     license: '',
     details: ['Titulada desde el año 2011.'],
   },
@@ -70,7 +70,7 @@ const finalProfessionals = [
     name: 'Srta. Luna María Jerez López',
     area: 'Técnico Superior en Higiene Bucodental',
     subtitle: 'Higiene bucodental y apoyo clínico',
-    image: '/equipo-luna-jerez.jpg',
+    image: '/equipo-luna-jerez.webp',
     license: '',
     details: ['Titulada desde el año 2019.'],
   },
@@ -78,7 +78,7 @@ const finalProfessionals = [
     name: 'Sr. José García Santiago',
     area: 'Atención al Paciente y Dirección',
     subtitle: 'Gestión clínica y atención personalizada',
-    image: '/equipo-jose-garcia.jpg',
+    image: '/equipo-jose-garcia.webp',
     license: '',
     details: [
       'Desde 2007 dedicado en exclusiva a la gestión de clínica y a la atención de nuestros pacientes.',
