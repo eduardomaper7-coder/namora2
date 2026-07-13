@@ -1895,13 +1895,13 @@ a {
 }
 
 .team-pro-media {
-  min-height: 460px;
+  min-height: 327px !important;
   background: var(--soft);
 }
 
 .team-pro-media img {
   width: 100%;
-  height: 100%;
+  height: 100% !important;
 }
 
 .team-pro-body {
